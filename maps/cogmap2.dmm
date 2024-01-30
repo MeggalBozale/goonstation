@@ -43197,7 +43197,7 @@
 /turf/simulated/floor/engine/vacuum,
 /area/station/science/lab)
 "cvH" = (
-/obj/machinery/atmospherics/unary/vent_pump/toxlab_chamber_to_tank{
+/obj/machinery/atmospherics/unary/vent_pump/toxlab_chamber_to_tank/overfloor{
 	dir = 4
 	},
 /turf/simulated/floor/engine/vacuum,
@@ -44315,14 +44315,14 @@
 /turf/simulated/floor/engine/vacuum,
 /area/station/science/lab)
 "cyK" = (
-/obj/machinery/atmospherics/unary/outlet_injector/active{
-	dir = 4
-	},
 /obj/machinery/sparker{
 	id = "tox_ignition1";
 	layer = 7;
 	name = "Mounted Igniter";
 	pixel_x = 24
+	},
+/obj/machinery/atmospherics/unary/outlet_injector/overfloor/active{
+	dir = 4
 	},
 /turf/simulated/floor/engine/vacuum,
 /area/station/science/lab)
@@ -48215,14 +48215,14 @@
 /turf/simulated/floor/engine/vacuum,
 /area/station/science/lab)
 "cKy" = (
-/obj/machinery/atmospherics/unary/outlet_injector/active{
-	dir = 4
-	},
 /obj/machinery/sparker{
 	id = "tox_ignition2";
 	layer = 7;
 	name = "Mounted Igniter";
 	pixel_x = 24
+	},
+/obj/machinery/atmospherics/unary/outlet_injector/overfloor/active{
+	dir = 4
 	},
 /turf/simulated/floor/engine/vacuum,
 /area/station/science/lab)

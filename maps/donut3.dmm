@@ -5238,14 +5238,8 @@
 	name = "Genetic Research"
 	})
 "bvI" = (
-/obj/machinery/atmospherics/unary/vent_pump{
-	dir = 4;
-	external_pressure_bound = 0;
-	icon_state = "in";
-	initialize_directions = 1;
-	internal_pressure_bound = 4000;
-	pressure_checks = 2;
-	pump_direction = 0
+/obj/machinery/atmospherics/unary/vent_pump/toxlab_chamber_to_tank/overfloor{
+	dir = 4
 	},
 /turf/simulated/floor/engine/vacuum,
 /area/station/science/lab)
@@ -24089,6 +24083,12 @@
 	},
 /turf/simulated/floor/escape,
 /area/station/hallway/secondary/exit)
+"hjT" = (
+/obj/machinery/atmospherics/unary/outlet_injector/active{
+	dir = 8
+	},
+/turf/space,
+/area/space)
 "hjY" = (
 /obj/grille/catwalk/jen,
 /obj/machinery/light/small/sticky{
@@ -46490,14 +46490,14 @@
 /turf/simulated/floor/red,
 /area/station/security/checkpoint/escape)
 "ogg" = (
-/obj/machinery/atmospherics/unary/outlet_injector/active{
-	dir = 4
-	},
 /obj/machinery/sparker{
 	id = "tox_ignition2";
 	layer = 7;
 	name = "Mounted Igniter";
 	pixel_y = 22
+	},
+/obj/machinery/atmospherics/unary/outlet_injector/overfloor/active{
+	dir = 4
 	},
 /turf/simulated/floor/engine/vacuum,
 /area/station/science/lab)
@@ -78922,14 +78922,14 @@
 /turf/simulated/floor/black,
 /area/station/science/bot_storage)
 "xQO" = (
-/obj/machinery/atmospherics/unary/outlet_injector/active{
-	dir = 4
-	},
 /obj/machinery/sparker{
 	id = "tox_ignition1";
 	layer = 7;
 	name = "Mounted Igniter";
 	pixel_y = -22
+	},
+/obj/machinery/atmospherics/unary/outlet_injector/overfloor/active{
+	dir = 4
 	},
 /turf/simulated/floor/engine/vacuum,
 /area/station/science/lab)
@@ -85434,7 +85434,7 @@ rdj
 rdj
 rdj
 rdj
-rdj
+hjT
 rdj
 rdj
 rdj

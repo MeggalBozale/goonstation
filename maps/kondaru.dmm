@@ -25912,9 +25912,6 @@
 /turf/simulated/floor/engine/vacuum,
 /area/station/science/lab)
 "cbh" = (
-/obj/machinery/atmospherics/unary/outlet_injector/active{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
 	dir = 10
 	},
@@ -25924,6 +25921,9 @@
 	name = "autoname - SS13";
 	pixel_y = 20;
 	tag = ""
+	},
+/obj/machinery/atmospherics/unary/outlet_injector/overfloor/active{
+	dir = 4
 	},
 /turf/simulated/floor/engine/vacuum,
 /area/station/science/lab)
@@ -45106,6 +45106,12 @@
 	},
 /turf/simulated/floor/grime,
 /area/station/maintenance/southeast)
+"niW" = (
+/obj/machinery/atmospherics/unary/vent_pump/toxlab_chamber_to_tank{
+	dir = 4
+	},
+/turf/simulated/floor/plating/airless/asteroid/dark,
+/area/research_outpost/indigo_rye)
 "njl" = (
 /obj/machinery/disposal,
 /obj/disposalpipe/trunk/south,
@@ -65871,7 +65877,7 @@ ciD
 ciD
 ciD
 ciD
-ciM
+niW
 ciD
 aaa
 aaa

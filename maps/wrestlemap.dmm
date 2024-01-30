@@ -23329,7 +23329,7 @@
 /turf/simulated/floor/wood,
 /area/station/medical/staff)
 "kia" = (
-/obj/machinery/atmospherics/unary/vent{
+/obj/machinery/atmospherics/unary/vent_pump/toxlab_chamber_to_tank/overfloor{
 	dir = 4
 	},
 /turf/simulated/floor/engine/vacuum,
@@ -30248,7 +30248,7 @@
 	},
 /area/station/hallway/primary/west)
 "nox" = (
-/obj/machinery/atmospherics/unary/outlet_injector/active{
+/obj/machinery/atmospherics/unary/outlet_injector/overfloor/active{
 	dir = 4
 	},
 /turf/simulated/floor/engine/vacuum,
@@ -36549,11 +36549,11 @@
 	},
 /area/station/hydroponics/lobby)
 "qdO" = (
-/obj/machinery/atmospherics/unary/outlet_injector/active{
-	dir = 4
-	},
 /obj/cable{
 	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/unary/outlet_injector/overfloor/active{
+	dir = 4
 	},
 /turf/simulated/floor/engine/vacuum,
 /area/station/science/lab)
@@ -51397,11 +51397,11 @@
 	},
 /area/station/engine/engineering)
 "wEo" = (
-/obj/machinery/atmospherics/unary/vent{
-	dir = 4
-	},
 /obj/cable{
 	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/unary/vent_pump/toxlab_chamber_to_tank/overfloor{
+	dir = 4
 	},
 /turf/simulated/floor/engine/vacuum,
 /area/station/science/lab)
@@ -54580,7 +54580,6 @@
 /area/station/engine/monitoring)
 "xUM" = (
 /obj/table/auto,
-/obj/item/blueprint,
 /obj/item/pen/pencil,
 /turf/simulated/floor/plating,
 /area/station/maintenance/west)

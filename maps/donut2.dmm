@@ -16844,7 +16844,7 @@
 /turf/space,
 /area/space)
 "cei" = (
-/obj/machinery/atmospherics/unary/outlet_injector/active{
+/obj/machinery/atmospherics/unary/outlet_injector/overfloor/active{
 	dir = 8
 	},
 /turf/simulated/floor/engine/vacuum,
@@ -46320,14 +46320,8 @@
 /turf/simulated/floor/white,
 /area/station/medical/medbay/surgery)
 "vah" = (
-/obj/machinery/atmospherics/unary/vent_pump{
-	dir = 8;
-	external_pressure_bound = 0;
-	icon_state = "in";
-	initialize_directions = 1;
-	internal_pressure_bound = 4000;
-	pressure_checks = 2;
-	pump_direction = 0
+/obj/machinery/atmospherics/unary/vent_pump/toxlab_chamber_to_tank/overfloor{
+	dir = 8
 	},
 /turf/simulated/floor/engine/vacuum,
 /area/station/science/lab)
@@ -55172,7 +55166,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+onh
 aaa
 aaa
 aaa

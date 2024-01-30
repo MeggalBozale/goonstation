@@ -14934,7 +14934,7 @@
 /area/research_outpost/toxins)
 "baY" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging,
-/obj/machinery/atmospherics/unary/outlet_injector/active{
+/obj/machinery/atmospherics/unary/outlet_injector/overfloor/active{
 	dir = 8
 	},
 /turf/simulated/floor/engine/vacuum{
@@ -15063,14 +15063,7 @@
 /turf/simulated/floor/engine/vacuum,
 /area/research_outpost/toxins)
 "bbv" = (
-/obj/machinery/atmospherics/unary/vent_pump{
-	external_pressure_bound = 0;
-	icon_state = "in";
-	initialize_directions = 1;
-	internal_pressure_bound = 4000;
-	pressure_checks = 2;
-	pump_direction = 0
-	},
+/obj/machinery/atmospherics/unary/vent_pump/toxlab_chamber_to_tank/overfloor,
 /turf/simulated/floor/engine/vacuum{
 	icon_state = "engine_caution_east"
 	},
@@ -15085,21 +15078,15 @@
 	},
 /area/flock_trader)
 "bbx" = (
-/obj/machinery/atmospherics/unary/outlet_injector/active,
+/obj/machinery/atmospherics/unary/outlet_injector/overfloor/active,
 /turf/simulated/floor/engine/vacuum{
 	icon_state = "engine_caution_west"
 	},
 /area/research_outpost/toxins)
 "bby" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging,
-/obj/machinery/atmospherics/unary/vent_pump{
-	dir = 4;
-	external_pressure_bound = 0;
-	icon_state = "in";
-	initialize_directions = 1;
-	internal_pressure_bound = 4000;
-	pressure_checks = 2;
-	pump_direction = 0
+/obj/machinery/atmospherics/unary/vent_pump/toxlab_chamber_to_tank/overfloor{
+	dir = 4
 	},
 /turf/simulated/floor/engine/vacuum{
 	icon_state = "engine_caution_east"
@@ -36164,6 +36151,12 @@
 /obj/machinery/light/incandescent/warm/very,
 /turf/simulated/floor/shuttlebay,
 /area/station/hangar/science)
+"hNY" = (
+/obj/machinery/atmospherics/unary/vent_pump/toxlab_chamber_to_tank/overfloor{
+	dir = 4
+	},
+/turf/space/fluid,
+/area/space)
 "hOr" = (
 /obj/item/crowbar,
 /obj/landmark/pest,
@@ -53975,7 +53968,7 @@ aqn
 aqn
 aqn
 aqn
-aqn
+hNY
 aqn
 aqn
 aqn

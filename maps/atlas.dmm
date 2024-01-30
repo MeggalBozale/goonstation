@@ -10953,7 +10953,7 @@
 /turf/simulated/floor/engine/vacuum,
 /area/station/science/lab)
 "aKt" = (
-/obj/machinery/atmospherics/unary/vent_pump/toxlab_chamber_to_tank{
+/obj/machinery/atmospherics/unary/vent_pump/toxlab_chamber_to_tank/overfloor{
 	dir = 1
 	},
 /turf/simulated/floor/engine/vacuum,
@@ -12851,15 +12851,13 @@
 /turf/simulated/floor/black,
 /area/station/medical/robotics)
 "aQV" = (
-/obj/machinery/atmospherics/unary/outlet_injector/active{
-	dir = 1;
-	id = "burn_2";
-	tag = "icon-off (NORTH)"
-	},
 /obj/machinery/sparker{
 	dir = 2;
 	id = "burn_2";
 	pixel_y = 20
+	},
+/obj/machinery/atmospherics/unary/outlet_injector/overfloor/active{
+	dir = 1
 	},
 /turf/simulated/floor/engine/vacuum,
 /area/station/science/lab)
@@ -13865,14 +13863,13 @@
 /turf/simulated/floor/bluewhite,
 /area/station/medical/medbay)
 "aUc" = (
-/obj/machinery/atmospherics/unary/outlet_injector/active{
-	dir = 1;
-	tag = "icon-off (NORTH)"
-	},
 /obj/machinery/sparker{
 	dir = 2;
 	id = "burn";
 	pixel_y = 20
+	},
+/obj/machinery/atmospherics/unary/outlet_injector/overfloor/active{
+	dir = 1
 	},
 /turf/simulated/floor/engine/vacuum,
 /area/station/science/lab)
