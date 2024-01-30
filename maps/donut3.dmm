@@ -26262,11 +26262,9 @@
 /turf/simulated/floor/plating/jen,
 /area/station/maintenance/inner/sw)
 "hSn" = (
-/obj/machinery/atmospherics/binary/pump/active{
+/obj/machinery/atmospherics/binary/pump{
 	dir = 4;
-	frequency = 1229;
-	id = "Chamber Two Outlet";
-	target_pressure = 1000
+	id = "Chamber Two Outlet"
 	},
 /turf/simulated/wall/auto/reinforced/jen/purple,
 /area/station/science/lab)
@@ -57093,11 +57091,9 @@
 /turf/simulated/floor/airless/plating/jen,
 /area/station/com_dish/comdish)
 "rpM" = (
-/obj/machinery/atmospherics/binary/pump/active{
+/obj/machinery/atmospherics/binary/pump{
 	dir = 4;
-	frequency = 1229;
-	id = "Chamber One Outlet";
-	target_pressure = 1000
+	name = "Chamber One Outlet"
 	},
 /turf/simulated/wall/auto/reinforced/jen/purple,
 /area/station/science/lab)

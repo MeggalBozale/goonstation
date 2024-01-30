@@ -3031,6 +3031,10 @@
 	dir = 1;
 	icon_state = "pipe-c"
 	},
+/obj/machinery/atmospherics/binary/pump{
+	dir = 4;
+	id = "Chamber Two Outlet"
+	},
 /turf/simulated/floor,
 /area/station/hallway/primary/east)
 "ajQ" = (
@@ -12932,7 +12936,7 @@
 /obj/machinery/atmospherics/binary/pump{
 	dir = 1;
 	frequency = 1229;
-	id = "Burn Chamber 1 Outlet"
+	id = "Chamber One Outlet"
 	},
 /turf/simulated/wall/auto/reinforced/supernorn,
 /area/station/science/lab)
@@ -13088,9 +13092,8 @@
 	},
 /area/station/hallway/primary/east)
 "aRK" = (
-/obj/machinery/atmospherics/binary/pump{
-	frequency = 1229;
-	id = "Burn Chamber 2 Inlet"
+/obj/machinery/atmospherics/binary/pump/active{
+	id = "Chamber Two Inlet"
 	},
 /turf/simulated/wall/auto/reinforced/supernorn,
 /area/station/science/lab)
@@ -14142,9 +14145,8 @@
 /turf/simulated/floor/black,
 /area/station/crew_quarters/catering)
 "aUU" = (
-/obj/machinery/atmospherics/binary/pump{
-	frequency = 1229;
-	id = "Burn Chamber 1 Inlet"
+/obj/machinery/atmospherics/binary/pump/active{
+	id = "Chamber One Inlet"
 	},
 /turf/simulated/wall/auto/reinforced/supernorn,
 /area/station/science/lab)
@@ -15090,7 +15092,7 @@
 /obj/machinery/atmospherics/binary/pump{
 	dir = 1;
 	frequency = 1229;
-	id = "Burn Chamber 2 Outlet"
+	id = "Chamber Two Outlet"
 	},
 /turf/simulated/wall/auto/reinforced/supernorn,
 /area/station/science/lab)
@@ -17937,6 +17939,13 @@
 	dir = 8
 	},
 /area/station/mining/refinery)
+"mLj" = (
+/obj/mapping_helper/wingrille_spawn/auto/reinforced,
+/obj/machinery/atmospherics/binary/pump{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/station/science/chemistry)
 "mPG" = (
 /obj/mapping_helper/firedoor_spawn,
 /obj/cable{
@@ -18440,6 +18449,10 @@
 	},
 /turf/simulated/floor,
 /area/station/hallway/primary/south)
+"pfm" = (
+/obj/decal/poster/wallsign/stencil/right/one,
+/turf/simulated/wall/auto/reinforced/supernorn,
+/area/station/science/lab)
 "pgU" = (
 /obj/machinery/navbeacon/mule/hallway_escape_north/south,
 /obj/decal/mule/beacon,
@@ -19019,6 +19032,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/station/security/brig/genpop)
+"rMT" = (
+/obj/decal/poster/wallsign/stencil/left/two,
+/turf/simulated/wall/auto/reinforced/supernorn,
+/area/station/science/lab)
 "rNn" = (
 /obj/machinery/light{
 	dir = 8;
@@ -61416,7 +61433,7 @@ aIR
 aHE
 aJG
 aIR
-aIR
+pfm
 azD
 aIR
 aaa
@@ -62308,7 +62325,7 @@ avG
 aWD
 azB
 aSb
-aCA
+mLj
 aDe
 aDO
 aED
@@ -63228,7 +63245,7 @@ aIR
 aJS
 aJG
 aIR
-aIR
+rMT
 aIR
 aIR
 aaa

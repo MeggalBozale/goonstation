@@ -11911,6 +11911,12 @@
 	},
 /turf/simulated/floor/black,
 /area/station/bridge)
+"bcX" = (
+/obj/machinery/atmospherics/binary/pump{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/station/maintenance/east)
 "bda" = (
 /obj/shrub{
 	dir = 1
@@ -13700,13 +13706,15 @@
 	},
 /area/station/science/lab)
 "bqA" = (
-/obj/machinery/door/poddoor/blast/single{
-	id = "tox_one";
-	layer = 4;
-	name = "Mixture Vent"
+/obj/grille/steel,
+/obj/machinery/door/poddoor/pyro/shutters{
+	dir = 1;
+	id = "tox_one"d";
+	layer = 8;
+	name = "Exhaust Vent"
 	},
 /turf/simulated/floor/engine/vacuum{
-	icon_state = "engine_caution_north"
+	icon_state = "engine_caution_south"
 	},
 /area/station/science/lab)
 "bqB" = (
@@ -13987,24 +13995,21 @@
 	dir = 5
 	},
 /turf/simulated/floor/engine/vacuum{
-	icon_state = "engine_caution_corners"
+	icon_state = "engine_caution_west"
 	},
 /area/station/science/lab)
 "brO" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
 	dir = 4
 	},
-/turf/simulated/floor/engine/vacuum{
-	icon_state = "engine_caution_south"
-	},
+/turf/simulated/floor/engine/vacuum,
 /area/station/science/lab)
 "brP" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
 	dir = 9
 	},
 /turf/simulated/floor/engine/vacuum{
-	dir = 1;
-	icon_state = "engine_caution_corners"
+	icon_state = "engine_caution_east"
 	},
 /area/station/science/lab)
 "brR" = (
@@ -18412,8 +18417,17 @@
 	},
 /area/station/bridge)
 "cMs" = (
-/turf/simulated/floor/grime,
-/area/space)
+/obj/grille/steel,
+/obj/machinery/door/poddoor/pyro/shutters{
+	dir = 1;
+	id = "tox_one"d";
+	layer = 8;
+	name = "Exhaust Vent"
+	},
+/turf/simulated/floor/engine/vacuum{
+	icon_state = "engine_caution_corners"
+	},
+/area/station/science/lab)
 "cNk" = (
 /obj/mapping_helper/wingrille_spawn/auto/reinforced,
 /obj/window_blinds/cog2,
@@ -42113,23 +42127,11 @@
 /turf/simulated/floor/plating,
 /area/station/maintenance/west)
 "vhL" = (
-/obj/mapping_helper/wingrille_spawn/auto/reinforced/crystal,
-/obj/machinery/door/poddoor/blast/single{
-	density = 0;
-	icon_state = "bdoorsingle0";
-	id = "tox_hs_one";
-	layer = 4;
-	name = "Chamber One Heat Shield";
-	opacity = 0
-	},
-/obj/machinery/atmospherics/binary/pump/active{
+/obj/machinery/atmospherics/binary/pump{
 	dir = 1;
-	frequency = 1229;
-	id = "Chamber Outlet";
-	name = "chamber outlet pump";
-	target_pressure = 1000
+	id = "Chamber Outlet"
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/wall/auto/reinforced/supernorn,
 /area/station/science/lab)
 "vjL" = (
 /obj/machinery/power/smes,
@@ -43588,6 +43590,19 @@
 /obj/cable,
 /turf/simulated/floor/plating,
 /area/station/medical/medbay)
+"wCa" = (
+/obj/grille/steel,
+/obj/machinery/door/poddoor/pyro/shutters{
+	dir = 1;
+	id = "tox_one"d";
+	layer = 8;
+	name = "Exhaust Vent"
+	},
+/turf/simulated/floor/engine/vacuum{
+	dir = 1;
+	icon_state = "engine_caution_corners"
+	},
+/area/station/science/lab)
 "wCd" = (
 /obj/machinery/light,
 /turf/simulated/floor/black/side,
@@ -45227,22 +45242,13 @@
 /turf/simulated/floor/engine,
 /area/station/engine/core/nuclear)
 "xSu" = (
-/obj/mapping_helper/wingrille_spawn/auto/reinforced/crystal,
-/obj/machinery/door/poddoor/blast/single{
-	density = 0;
-	icon_state = "bdoorsingle0";
-	id = "tox_hs_one";
-	layer = 4;
-	name = "Chamber One Heat Shield";
-	opacity = 0
-	},
 /obj/machinery/atmospherics/binary/pump/active{
 	frequency = 1229;
 	id = "Chamber Inlet";
 	name = "chamber inlet pump";
 	target_pressure = 1000
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/wall/auto/reinforced/supernorn,
 /area/station/science/lab)
 "xTZ" = (
 /obj/stool/chair/comfy/blue{
@@ -47489,7 +47495,7 @@ aaa
 aaa
 aaa
 aaa
-cMs
+aaa
 aaa
 aaa
 aaa
@@ -88022,7 +88028,7 @@ aXj
 asm
 aFW
 asm
-asm
+bcX
 aXj
 oRn
 bfR
@@ -88293,7 +88299,7 @@ bnd
 bnd
 bnd
 bnd
-bsB
+bva
 btW
 bsB
 bwk
@@ -88550,7 +88556,7 @@ xSu
 bpw
 bqz
 brN
-bsD
+cMs
 ozL
 bvb
 aaa
@@ -89064,7 +89070,7 @@ vhL
 kSL
 bqB
 brP
-bsD
+wCa
 ozL
 aaa
 aaa
@@ -89321,7 +89327,7 @@ bnd
 bpz
 bpz
 jSd
-bnd
+bsD
 qzG
 jgP
 jgP

@@ -26685,11 +26685,9 @@
 /turf/simulated/floor/engine/vacuum,
 /area/station/science/lab)
 "bQK" = (
-/obj/machinery/atmospherics/binary/pump/active{
+/obj/machinery/atmospherics/binary/pump{
 	dir = 4;
-	frequency = 1229;
-	id = "Chamber One Outlet";
-	target_pressure = 1000
+	name = "Chamber One Outlet"
 	},
 /turf/simulated/wall/auto/reinforced/supernorn,
 /area/station/science/lab)
@@ -44801,6 +44799,15 @@
 /obj/tree,
 /turf/simulated/wall/grass/leafy,
 /area/station/garden/owlery)
+"hFO" = (
+/obj/machinery/atmospherics/binary/pump/active{
+	dir = 8;
+	frequency = 1229;
+	id = "Chamber One Outlet";
+	target_pressure = 1000
+	},
+/turf/space,
+/area/space)
 "hGk" = (
 /turf/simulated/wall/auto/reinforced/supernorn,
 /area/station/medical/medbay/psychiatrist)
@@ -56505,6 +56512,13 @@
 	icon_state = "catwalk_cross"
 	},
 /area/space)
+"ran" = (
+/obj/machinery/atmospherics/binary/pump{
+	dir = 4;
+	id = "Chamber Two Outlet"
+	},
+/turf/simulated/wall/auto/reinforced/supernorn,
+/area/station/science/lab)
 "rbE" = (
 /obj/mapping_helper/wingrille_spawn/auto,
 /turf/simulated/floor/plating,
@@ -59028,11 +59042,12 @@
 /turf/simulated/floor/red,
 /area/station/medical/medbay/surgery)
 "tdX" = (
-/obj/machinery/atmospherics/binary/pump/active{
-	dir = 4;
-	frequency = 1229;
-	id = "Chamber Two Outlet";
-	target_pressure = 1000
+/obj/decal/poster/wallsign/stencil/right/one{
+	pixel_x = 12;
+	pixel_y = -4
+	},
+/obj/decal/poster/wallsign/stencil/right/two{
+	pixel_y = 26
 	},
 /turf/simulated/wall/auto/reinforced/supernorn,
 /area/station/science/lab)
@@ -91542,7 +91557,7 @@ adC
 adC
 adC
 adC
-adC
+hFO
 bHW
 bLe
 bHW
@@ -91848,10 +91863,10 @@ adC
 bHW
 bLf
 bHW
-bOd
+ran
 bPx
+bOd
 tdX
-bHW
 bQK
 bPx
 guZ

@@ -151,5 +151,6 @@
 	level = OVERFLOOR
 
 /obj/machinery/atmospherics/unary/outlet_injector/overfloor/active
+	name = "Air Injector"
 	icon_state = "on-map"
 	on = TRUE

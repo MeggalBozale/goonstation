@@ -43203,11 +43203,9 @@
 /turf/simulated/floor/engine/vacuum,
 /area/station/science/lab)
 "cvI" = (
-/obj/machinery/atmospherics/binary/pump/active{
+/obj/machinery/atmospherics/binary/pump{
 	dir = 4;
-	frequency = 1229;
-	id = "Chamber One Outlet";
-	target_pressure = 1000
+	id = "Chamber One Outlet"
 	},
 /turf/simulated/wall/auto/reinforced/supernorn,
 /area/station/science/lab)
@@ -49121,11 +49119,9 @@
 /turf/simulated/floor/engine/vacuum,
 /area/station/science/lab)
 "cNr" = (
-/obj/machinery/atmospherics/binary/pump/active{
+/obj/machinery/atmospherics/binary/pump{
 	dir = 4;
-	frequency = 1229;
-	id = "Chamber Two Outlet";
-	target_pressure = 1000
+	id = "Chamber Two Outlet"
 	},
 /turf/simulated/wall/auto/reinforced/supernorn,
 /area/station/science/lab)
@@ -62021,6 +62017,10 @@
 	},
 /turf/simulated/floor/caution/south,
 /area/station/engine/coldloop)
+"iEJ" = (
+/obj/decal/poster/wallsign/stencil/right/two,
+/turf/simulated/wall/auto/reinforced/supernorn,
+/area/station/science/lab)
 "iEN" = (
 /obj/disposalpipe/segment,
 /obj/machinery/door/airlock/pyro/engineering{
@@ -72262,6 +72262,10 @@
 /obj/mapping_helper/access/research_foyer,
 /turf/simulated/floor/purple,
 /area/station/science/lobby)
+"tSO" = (
+/obj/decal/poster/wallsign/stencil/right/one,
+/turf/simulated/wall/auto/reinforced/supernorn,
+/area/station/science/lab)
 "tSS" = (
 /obj/vehicle/segway,
 /obj/machinery/firealarm/east,
@@ -99789,7 +99793,7 @@ aaI
 aaa
 aaa
 cta
-cta
+iEJ
 cNr
 kQr
 cKz
@@ -99803,7 +99807,7 @@ fvo
 cyL
 eRF
 cvI
-cta
+tSO
 cta
 aaa
 anm

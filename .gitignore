@@ -41,6 +41,7 @@ __pycache__/
 
 # Ignore the tracy profiler .dll
 prof.dll
+/tracy/*
 
 # Build tools cache
 /tools/**/.cache

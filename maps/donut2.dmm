@@ -29666,15 +29666,13 @@
 /turf/simulated/floor/green,
 /area/station/hydroponics/bay)
 "kHm" = (
-/obj/machinery/atmospherics/binary/pump/active{
-	dir = 8;
-	frequency = 1229;
-	id = "Chamber Two Outlet";
-	target_pressure = 1000
-	},
 /obj/decal/poster/wallsign/stencil/right/two{
 	pixel_x = 0;
 	pixel_y = 20
+	},
+/obj/machinery/atmospherics/binary/pump{
+	dir = 8;
+	id = "Chamber Two Outlet"
 	},
 /turf/simulated/wall/auto/reinforced/supernorn,
 /area/station/science/lab)
@@ -49215,15 +49213,13 @@
 /turf/simulated/floor/black,
 /area/station/turret_protected/ai)
 "wRA" = (
-/obj/machinery/atmospherics/binary/pump/active{
-	dir = 8;
-	frequency = 1229;
-	id = "Chamber One Outlet";
-	target_pressure = 1000
-	},
 /obj/decal/poster/wallsign/stencil/right/one{
 	pixel_x = 0;
 	pixel_y = 0
+	},
+/obj/machinery/atmospherics/binary/pump{
+	dir = 8;
+	name = "Chamber One Outlet"
 	},
 /turf/simulated/wall/auto/reinforced/supernorn,
 /area/station/science/lab)
