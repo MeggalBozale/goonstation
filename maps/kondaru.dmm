@@ -26233,11 +26233,9 @@
 /turf/simulated/floor/engine/vacuum,
 /area/station/science/lab)
 "cch" = (
-/obj/machinery/atmospherics/binary/pump/active{
+/obj/machinery/atmospherics/binary/pump{
 	dir = 4;
-	frequency = 1229;
-	id = "Toxin Chamber Outlet";
-	target_pressure = 1000
+	id = "Chamber Outlet"
 	},
 /turf/simulated/wall/auto/reinforced/supernorn,
 /area/station/science/lab)
