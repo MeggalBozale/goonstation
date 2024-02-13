@@ -1659,14 +1659,14 @@ TYPEINFO(/obj/machinery/power/furnace/thermo)
 	var/list/pump_data_ref = src.getPump(signal.data["netid"])
 	if (pump_data_ref)
 		// We exist in the list already, update information instead
-		for (var/key as anything in signal.data)
+		for (var/key in signal.data)
 			pump_data_ref[key] = signal.data[key]
 		pump_data_ref["processing"] = FALSE
 		pump_data_ref["alive"] = PUMP_ALIVE
 		return
 
 	var/list/infoset = new()
-	for (var/key as anything in signal.data)
+	for (var/key in signal.data)
 		infoset[key] = signal.data[key]
 	var/area/A = get_area(signal.source)
 	if (!A)
@@ -1702,23 +1702,23 @@ TYPEINFO(/obj/machinery/power/furnace/thermo)
 /// Check for pumps that 'sploded or are otherwise unreachable
 /obj/machinery/computer/atmosphere/pumpcontrol/proc/check_if_alive(override_cooldown = FALSE)
 	if (!override_cooldown && ON_COOLDOWN(src, "check_pumps_living", 1 MINUTE)) return
-	for (var/area_name as anything in src.pump_infoset)
-		for (var/pump as anything in src.pump_infoset[area_name])
+	for (var/area_name in src.pump_infoset)
+		for (var/pump in src.pump_infoset[area_name])
 			if (src.pump_infoset[area_name][pump]["alive"] == PUMP_ALIVE) // Don't modify dead ones if they were just jammed theyll respond
 				src.pump_infoset[area_name][pump]["alive"] = PUMP_SCHRODINGER // https://i.imgur.com/mUfxPmb.png
 
 	src.request_data()
 	SPAWN(5 SECONDS)
-		for (var/area_name as anything in src.pump_infoset)
-			for (var/pump as anything in src.pump_infoset[area_name])
+		for (var/area_name in src.pump_infoset)
+			for (var/pump in src.pump_infoset[area_name])
 				if (src.pump_infoset[area_name][pump]["alive"] != PUMP_ALIVE)
 					src.pump_infoset[area_name][pump]["alive"] = PUMP_DEAD
 
 /// Get a pump by net id. Does not ask for pump data from pump
 /obj/machinery/computer/atmosphere/pumpcontrol/proc/getPump(var/netid)
-	for (var/area_name as anything in src.pump_infoset)
+	for (var/area_name in src.pump_infoset)
 		var/list/L = src.pump_infoset[area_name]
-		for (var/pump as anything in L)
+		for (var/pump in L)
 			if (pump == netid)
 				return L[pump]
 	return 0
