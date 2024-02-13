@@ -1684,7 +1684,7 @@ TYPEINFO(/obj/machinery/power/furnace/thermo)
 		// We are not first of an area, place us in the list alphabetically
 		var/iter = 1
 		var/list/L = src.pump_infoset[infoset["area_name"]]
-		while ((iter <= L.len) && sorttext(infoset["area_name"], L[iter]) == -1)
+		while ((iter <= length(L)) && sorttext(infoset["area_name"], L[iter]) == -1)
 			iter += 1
 
 		// Insert key first
@@ -1695,7 +1695,7 @@ TYPEINFO(/obj/machinery/power/furnace/thermo)
 	..()
 	if(status & (BROKEN | NOPOWER))
 		return
-	if(!src.pump_infoset.len)
+	if(length(!src.pump_infoset))
 		src.request_data() // get data for first time
 	src.check_if_alive()
 
