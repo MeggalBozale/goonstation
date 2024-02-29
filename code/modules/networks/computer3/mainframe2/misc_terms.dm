@@ -693,6 +693,8 @@ TYPEINFO(/obj/machinery/networked/storage)
 	var/obj/item/tank/tank2 = null
 	/// File record where the simulation results are kept
 	var/datum/computer/file/record/results = null
+	/// Previous recorded length of the results log. Used to only send new log data.
+	var/previous_results_len = 0
 	/// Our VR TTV to attach tank1 and tank2 to
 	var/obj/item/device/transfer_valve/vr/vrbomb = null
 	power_usage = 200
@@ -871,6 +873,11 @@ TYPEINFO(/obj/machinery/networked/storage)
 			"net_number" = src.net_number,
 		)
 
+	ui_static_data()
+		return list (
+			"log_output" = src.get_logs()
+		)
+
 	update_icon()
 		if(tank1) //Update tank overlays.
 			UpdateOverlays(image(src.icon,"bscanner-tank1"), "tank1")
@@ -910,6 +917,20 @@ TYPEINFO(/obj/machinery/networked/storage)
 			return 1
 
 		src.ui_interact(user)
+
+	/// Get the log output as a big string, but only if it (probably) changed.
+	proc/get_logs()
+		if (isnull(src.results))
+			src.previous_results_len = 0
+			return
+		. = list()
+		for (var/x in src.results.fields)
+			. += "[x]"
+			if (isnull(src.results.fields[x]))
+				. += ""
+			else
+				. += "[src.results.fields[x]]"
+		src.previous_results_len = length(src.results)
 
 	proc/generate_vrbomb()
 		if(!(src.tank1 && src.tank2))
