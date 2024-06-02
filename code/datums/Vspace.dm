@@ -116,7 +116,7 @@ var/global/datum/v_space/v_space_network/Station_VNet
 					O.name = O.real_name
 					O.set_loc(arrival_loc)
 
-		return 1
+		return TRUE
 
 
 	proc/In_Network(var/mob/user, var/networkdevice)
