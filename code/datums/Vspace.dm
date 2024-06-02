@@ -59,15 +59,15 @@ var/global/datum/v_space/v_space_network/Station_VNet
 			character = create_Vcharacter(user, network_device, network, B)
 			character.set_loc(B)
 			character.visible_message(SPAN_NOTICE("<b>[character.name] logs in!</b>"))
-		
+
 		users.Add(character)
 		// Made much more prominent due to frequent a- and mhelps (Convair880).
 		character.show_text("<h2>[SPAN_ALERT("<B>Death in virtual reality will result in a log-out. You can also press one of the logout buttons to leave.</B>")]</h2>", "red")
 		return
 
-
+	/// Remove a player/observer from Vspace.
 	proc/Leave_Vspace(var/mob/living/carbon/human/virtual/user)
-		if (!user) return 0
+		if (!user) return
 		//We have a body - give them a VR key if none have been dispensed
 		if(user.mind && user.body && !vr_key_dispensed && user.check_contents_for(/obj/item/device/key/virtual))
 			new /obj/item/device/key/virtual(user.body.loc)
