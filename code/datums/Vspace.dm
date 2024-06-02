@@ -1,33 +1,3 @@
-/*
-/mob/proc/jack_in()
-	set category = "Local"
-	set name="Enter V-space"
-
-	if (!ismob(usr)) return
-	if (!usr.client) return
-	if (!usr.network_device) return
-
-	if (!isalive(usr) || usr.getStatusDuration("stunned") !=0)
-		return
-
-	var/mob/living/user = usr
-	if (user.network_device)
-		var/datum/v_space/V
-		V.Enter_Vspace(user, user.network_device)
-	return
-
-/mob/proc/jack_out()
-	set category = "Local"
-	set name="Exit V-space"
-
-	if (!ismob(usr)) return
-	if (!usr.client) return
-	if (!istype(usr, /mob/living/carbon/human/virtual/)) return
-
-	var/datum/v_space/V
-	V.Leave_Vspace(usr)
-	return*/
-
 // Logout buttons were discontinued because...?? Well, here they are again (Convair880).
 /obj/death_button/VR_logout_button
 	name = "Leave VR"
@@ -49,16 +19,14 @@
 
 var/global/datum/v_space/v_space_network/Station_VNet
 
-datum/v_space
-	var
-		active = 0
-		list/users = list()			  //Who is in V-space
-		list/inactive_bodies = list() //Spare virtual bodies. waste not want not
-		vr_key_dispensed = 0
+/datum/v_space
+	var/active = FALSE //! Whether or not v-space is active. No network, no service.
+	var/list/users = list()	//! All users who are in V-Space
+	var/vr_key_dispensed = 0
 
 
 	v_space_network
-		active = 1
+		active = TRUE
 
 
 	proc/Enter_Vspace(var/mob/user as mob, var/network_device, var/network)
@@ -159,13 +127,6 @@ datum/v_space
 					O.name = O.real_name
 					O.set_loc(arrival_loc)
 
-/*
-		if(!user.client)
-			inactive_bodies += user
-			user.body = null
-			user.set_loc(null)
-			return 0
-*/
 		return 1
 
 
