@@ -40,11 +40,6 @@ var/global/datum/v_space/v_space_network/Station_VNet
 			boutput(user, SPAN_ALERT("You don't have a mind!"))
 			return
 
-//		var/range_check = In_Network(user, network_device, network)
-//		if(!range_check)
-//			boutput(user, SPAN_ALERT("Out of network range!"))
-//			return
-
 		var/turf/B = pick_landmark(network)
 
 		if(!B) //no entry landmark
@@ -176,8 +171,7 @@ var/global/datum/v_space/v_space_network/Station_VNet
 		return virtual_character
 
 
-	proc/copy_to(var/mob/living/carbon/human/virtual/character, var/mob/living/carbon/human/user )
-//		character.real_name = "Virtual [user.real_name]"
+	proc/copy_to(var/mob/living/carbon/human/virtual/character, var/mob/living/carbon/human/user)
 		character.bioHolder.mobAppearance.gender = user.gender
 		character.gender = user.gender
 		character.bioHolder.age = user.bioHolder.age
