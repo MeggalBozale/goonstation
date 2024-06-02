@@ -493,7 +493,6 @@ TYPEINFO(/obj/item/clothing/glasses/visor)
 	unequipped(var/mob/user)
 		..()
 		if(istype(user, /mob/living/carbon/human/virtual) && user:body)
-			//Station_VNet.Leave_Vspace(user)
 			user.death()
 		return
 
