@@ -1,3 +1,6 @@
+
+var/global/datum/v_space/v_space_network/Station_VNet
+
 // Logout buttons were discontinued because...?? Well, here they are again (Convair880).
 /obj/death_button/VR_logout_button
 	name = "Leave VR"
@@ -16,8 +19,6 @@
 
 		Station_VNet.Leave_Vspace(user)
 		return
-
-var/global/datum/v_space/v_space_network/Station_VNet
 
 /datum/v_space
 	var/active = FALSE //! Whether or not v-space is active. No network, no service.
