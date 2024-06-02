@@ -22,7 +22,7 @@ var/global/datum/v_space/v_space_network/Station_VNet
 /datum/v_space
 	var/active = FALSE //! Whether or not v-space is active. No network, no service.
 	var/list/users = list()	//! All users who are in V-Space
-	var/vr_key_dispensed = 0
+	var/vr_key_dispensed = FALSE //! Whether or not we gave out a VR key yet.
 
 	/// Enter in a player/observer into Vspace.
 	proc/Enter_Vspace(var/mob/user, var/network_device, var/network)
