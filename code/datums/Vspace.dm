@@ -118,12 +118,6 @@ var/global/datum/v_space/v_space_network/Station_VNet
 
 		return TRUE
 
-	/// Return whether or not we are within the Vspace network.
-	proc/In_Network(var/mob/user, var/networkdevice)
-		for(var/obj/machinery/sim/transmitter/T in orange(10,networkdevice))
-			return T.active
-		return FALSE
-
 	proc/create_Vcharacter(var/mob/user, var/network_device, var/network, turf/B)
 		var/mob/living/carbon/human/virtual/virtual_character
 
