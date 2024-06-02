@@ -71,7 +71,7 @@ var/global/datum/v_space/v_space_network/Station_VNet
 		//We have a body - give them a VR key if none have been dispensed
 		if(user.mind && user.body && !vr_key_dispensed && user.check_contents_for(/obj/item/device/key/virtual))
 			new /obj/item/device/key/virtual(user.body.loc)
-			vr_key_dispensed = 1
+			vr_key_dispensed = TRUE
 
 		if (user.client)
 			user.client.reset_view()
@@ -118,13 +118,11 @@ var/global/datum/v_space/v_space_network/Station_VNet
 
 		return TRUE
 
-
+	/// Return whether or not we are within the Vspace network.
 	proc/In_Network(var/mob/user, var/networkdevice)
 		for(var/obj/machinery/sim/transmitter/T in orange(10,networkdevice))
-			if(T.active == 1)
-				return 1
-		return 0
-
+			return T.active
+		return FALSE
 
 	proc/create_Vcharacter(var/mob/user, var/network_device, var/network, turf/B)
 		var/mob/living/carbon/human/virtual/virtual_character
