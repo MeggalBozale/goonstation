@@ -3,7 +3,7 @@ datum/mind
 	var/ckey
 	var/displayed_key
 	var/mob/current
-	var/mob/virtual
+	var/mob/virtual //! Like current, but for the virtual character we might be controlling in Vspace.
 
 	/// stores valuable things about the mind's memory
 	var/memory
