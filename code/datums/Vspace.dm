@@ -82,10 +82,11 @@ var/global/datum/v_space/v_space_network/Station_VNet
 					antag_role.on_death()
 
 		O.visible_message(SPAN_ALERT("<b>[user] logs out!</b>"))
-		
+
 		if (istype(user.loc,/obj/racing_clowncar/kart))
 			var/obj/racing_clowncar/kart/car = user.loc
 			car.reset()
+
 		if (isdead(user))
 			for (var/obj/item/I in user)
 				// Stop littering the place with VR skulls and organs, aaahh (Convair880).
@@ -93,9 +94,10 @@ var/global/datum/v_space/v_space_network/Station_VNet
 					continue
 				if (I != user.w_uniform && I != user.shoes)
 					user.u_equip(I)
-					if (I) //I don't know of any items that delete themselves on drop BUT HEY
+					if (I) // I don't know of any items that delete themselves on drop BUT HEY
 						I.set_loc(user.loc)
 						I.layer = initial(I.layer)
+
 		users.Remove(user)
 		if (user.mind && user.body)
 			user.mind.transfer_to(user.body)
@@ -105,14 +107,14 @@ var/global/datum/v_space/v_space_network/Station_VNet
 			if(user.network_device)
 				var/mob/dead/observer/O = user.ghostize()
 				if (O)
-					O.real_name = user.isghost
+					O.real_name = user.ghost_name
 					O.name = O.real_name
 					O.set_loc(user.network_device)
 			else
 				var/mob/dead/observer/O = user.ghostize()
 				if (O)
 					var/arrival_loc = pick_landmark(LANDMARK_LATEJOIN)
-					O.real_name = user.isghost
+					O.real_name = user.ghost_name
 					O.name = O.real_name
 					O.set_loc(arrival_loc)
 
@@ -148,7 +150,8 @@ var/global/datum/v_space/v_space_network/Station_VNet
 		virtual_character.equip_if_possible( C, SLOT_W_UNIFORM )
 		virtual_character.equip_if_possible( S, SLOT_SHOES)
 		if(isobserver(user) && !isAIeye(user))
-			virtual_character.isghost = user.real_name
+			virtual_character.ghost_name = user.real_name
+			virtual_character.is_ghost = TRUE
 			virtual_character.real_name = "Virtual Spectre #[rand(1, 999)]"
 		else
 			virtual_character.real_name = "Virtual [user.real_name]"

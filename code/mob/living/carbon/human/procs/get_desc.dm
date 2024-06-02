@@ -356,7 +356,7 @@
 
 				if (istype(mob, /mob/living/carbon/human/virtual))
 					var/mob/living/carbon/human/virtual/vr_person = mob
-					if (!vr_person.isghost) // rare but can happen if you leave your body while alive, and then decide to go into vr as a ghost
+					if (!vr_person.is_ghost) // rare but can happen if you leave your body while alive, and then decide to go into vr as a ghost
 						using_vr_goggles = TRUE
 				else if (istype(mob, /mob/living/critter/robotic/scuttlebot))
 					var/mob/living/critter/robotic/scuttlebot/scuttlebot = mob

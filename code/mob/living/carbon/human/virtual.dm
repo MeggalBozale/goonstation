@@ -1,9 +1,9 @@
 /mob/living/carbon/human/virtual
 	real_name = "Virtual Human"
-	var/mob/body = null
-	var/isghost = 0 //Should contain a string of the original ghosts real_name
+	var/mob/body = null //! The
+	var/ghost_name = "" //! Should contain a string of the original ghosts real_name, if any
+	var/is_ghost = FALSE //! Whether or not we are a ghost!
 	var/escape_vr = 0
-
 
 	New()
 		..()
@@ -30,7 +30,7 @@
 				src.gib()
 				return
 
-			if(!isghost && src.body)
+			if(!src.is_ghost && src.body)
 				if(!isAIeye(src) && isdead(src.body) || !src.body:network_device)
 					src.gib()
 					return
@@ -43,10 +43,10 @@
 		qdel(src)
 
 	disposing()
-		if (isghost && src.client)
+		if (src.is_ghost && src.client)
 			var/mob/dead/observer/O = src.ghostize()
 			var/arrival_loc = pick_landmark(LANDMARK_LATEJOIN)
-			O.real_name = src.isghost
+			O.real_name = src.is_ghost
 			O.name = O.real_name
 			O.set_loc(arrival_loc)
 		..()
