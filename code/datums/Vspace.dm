@@ -68,7 +68,7 @@ var/global/datum/v_space/v_space_network/Station_VNet
 	/// Remove a player/observer from Vspace.
 	proc/Leave_Vspace(var/mob/living/carbon/human/virtual/user)
 		if (!user) return
-		//We have a body - give them a VR key if none have been dispensed
+		// We have a body - give them a VR key if none have been dispensed
 		if(user.mind && user.body && !vr_key_dispensed && user.check_contents_for(/obj/item/device/key/virtual))
 			new /obj/item/device/key/virtual(user.body.loc)
 			vr_key_dispensed = TRUE
@@ -81,8 +81,8 @@ var/global/datum/v_space/v_space_network/Station_VNet
 				if (antag_role.vr)
 					antag_role.on_death()
 
-		for(var/mob/O in oviewers())
-			boutput(O, SPAN_ALERT("<b>[user] logs out!</b>"))
+		O.visible_message(SPAN_ALERT("<b>[user] logs out!</b>"))
+		
 		if (istype(user.loc,/obj/racing_clowncar/kart))
 			var/obj/racing_clowncar/kart/car = user.loc
 			car.reset()
