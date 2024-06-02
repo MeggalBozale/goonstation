@@ -1,7 +1,6 @@
 
 var/global/datum/v_space/v_space_network/Station_VNet
 
-// Logout buttons were discontinued because...?? Well, here they are again (Convair880).
 /obj/death_button/VR_logout_button
 	name = "Leave VR"
 	desc = "Press this button to log out of virtual reality."
