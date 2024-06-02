@@ -24,11 +24,6 @@ var/global/datum/v_space/v_space_network/Station_VNet
 	var/list/users = list()	//! All users who are in V-Space
 	var/vr_key_dispensed = 0
 
-
-	v_space_network
-		active = TRUE
-
-
 	proc/Enter_Vspace(var/mob/user as mob, var/network_device, var/network)
 	//Who is entering, What they are using to enter, Which network are they entering
 		if(!user)
@@ -229,3 +224,6 @@ var/global/datum/v_space/v_space_network/Station_VNet
 		if (AH.s_tone == null  || AH.s_tone == "#ffffff")
 			AH.s_tone = "#FEFEFE"
 		return
+
+/datum/v_space/v_space_network
+		active = TRUE
